@@ -192,8 +192,8 @@ public class GameScreen extends Screen{
 		int len = drop.cloud.size();
 		for(int i = 1; i < len; i++){
 			BodyCloud cloud = drop.cloud.get(i);
-			x = cloud.x * 16;
-			y = cloud.y * 16;
+			x = cloud.x * 32;
+			y = cloud.y * 32;
 			g.drawPixmap(Assets.bodycloud, x, y);
 		}
 		Pixmap headPixmap = null;
@@ -205,8 +205,8 @@ public class GameScreen extends Screen{
 			headPixmap = Assets.headdown;
 		if(drop.direction == Drop.RIGHT)
 			headPixmap = Assets.headright;
-		x = head.x * 16 + 16;
-		y = head.y * 16 + 16;
+		x = head.x * 32 + 16;
+		y = head.y * 32 + 16;
 		g.drawPixmap(headPixmap, 	x - headPixmap.getWidth() / 2,
 									y - headPixmap.getHeight() / 2);
 
